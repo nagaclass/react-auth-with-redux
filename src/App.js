@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "./redux/userAuth/userAuth.actions";
 import Unauthorized from "./pages/Unauthorized";
 import Layout from "./components/Layout";
+import Languages from "./pages/Languages";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ const App = () => {
       <ul className="flex items-center my-5 justify-center py-5">
         <li className="mx-4 text-2xl">
           <Link to="/">Home</Link>
+        </li>
+        <li className="mx-4 text-2xl">
+          <Link to="/langs">Langs</Link>
         </li>
         <li className="mx-4 text-2xl">
           <Link to="/persons">Persons</Link>
@@ -66,6 +70,7 @@ const App = () => {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/persons" element={<Persons />} />
             <Route exact path="/persons/add" element={<AddPerson />} />
+            <Route exact path="/langs" element={<Languages />} />
           </Route>
 
           <Route element={<RequireAuth allowedRoles={[ROLES.person, ROLES.user]} />}>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
 import { Provider } from "react-redux";
+import "./i18n";
 
 import "./index.css";
 import "mapbox-gl/dist/mapbox-gl.css";
